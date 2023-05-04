@@ -1,11 +1,14 @@
 import React from 'react';
+import ExpenseDate from './ExpenseDate';
+import ExpenseDetails from './ExpenseDetails';
 import './ExpenseItem.css';
 
 function ExpenseItem(props) {
 
     return (
         <div className='expense-item'>
-            <div>{props.date[0]}</div>
+            <ExpenseDate date={props.date} />
+            <ExpenseDetails LocationOfExpenditure={props.LocationOfExpenditure} amount={props.amount} title={props.title}/>
             <div className='expense-item__description'>
                 <h2>{props.title}</h2>
                 <h2>{props.LocationOfExpenditure}</h2>
